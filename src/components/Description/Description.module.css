@@ -1,0 +1,13 @@
+.description {
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.descriptionTitle {
+  margin-bottom: 0.25rem;
+}
+
+.description > p {
+  font-weight: 500;
+  font-style: italic;
+}

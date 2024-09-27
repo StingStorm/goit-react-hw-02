@@ -1,0 +1,21 @@
+.feedbackOptions {
+  display: flex;
+  gap: 0.5rem;
+
+  margin-bottom: 1rem;
+}
+
+.feedbackOptions > button {
+  width: 5rem;
+  text-transform: capitalize;
+
+  border: 1px solid #000;
+  border-radius: 0.33rem;
+  cursor: pointer;
+
+  transition: background-color 250ms ease-in-out;
+}
+
+.feedbackOptions > button:hover {
+  background-color: gainsboro;
+}

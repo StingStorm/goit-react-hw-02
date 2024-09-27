@@ -1,0 +1,13 @@
+.feedbackList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.33rem;
+  text-align: center;
+  min-width: 25%;
+}
+
+.feedbackList > li {
+  min-width: 50%;
+  border: 1px solid #000;
+  text-transform: capitalize;
+}
