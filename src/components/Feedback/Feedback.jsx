@@ -1,10 +1,6 @@
 import css from './Feedback.module.css';
 
 const Feedback = props => {
-  const positiveFb = Math.round(
-    (props.feedbacks.good / props.totalFeedback) * 100
-  );
-
   return (
     <ul className={css.feedbackList}>
       {Object.entries(props.feedbacks).map(([key, value], index) => {
@@ -15,7 +11,7 @@ const Feedback = props => {
         );
       })}
       <li>Total: {props.totalFeedback}</li>
-      <li>Positive: {positiveFb}%</li>
+      <li>Positive: {props.positiveFb}%</li>
     </ul>
   );
 };

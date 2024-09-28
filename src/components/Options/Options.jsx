@@ -1,6 +1,6 @@
-import css from './FOptions.module.css';
+import css from './Options.module.css';
 
-const FOptions = props => {
+const Options = props => {
   return (
     <div className={css.feedbackOptions}>
       {Object.keys(props.feedbacks).map((feedback, index) => {
@@ -17,4 +17,4 @@ const FOptions = props => {
   );
 };
 
-export default FOptions;
+export default Options;

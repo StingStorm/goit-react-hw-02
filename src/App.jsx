@@ -3,7 +3,8 @@ import './App.css';
 import Header from './components/AppHeader/AppHeader';
 import Description from './components/Description/Description';
 import Feedback from './components/Feedback/Feedback';
-import FOptions from './components/FOptions/FOptions';
+import Options from './components/Options/Options';
+import Notification from './components/Notification/Notification';
 
 function App() {
   const [feedbacks, setFeedbacks] = useState(() => {
@@ -43,21 +44,28 @@ function App() {
     (acc, value) => acc + value,
     0
   );
+
+  const positiveFb = Math.round((feedbacks.good / totalFeedback) * 100);
+
   return (
     <>
       <Header />
       <main>
         <Description />
-        <FOptions
+        <Options
           feedbacks={feedbacks}
           totalFeedback={totalFeedback}
           onUpdate={updateFeedback}
           onReset={resetFeedbacks}
         />
-        {totalFeedback > 0 ? (
-          <Feedback feedbacks={feedbacks} totalFeedback={totalFeedback} />
+        {totalFeedback ? (
+          <Feedback
+            feedbacks={feedbacks}
+            totalFeedback={totalFeedback}
+            positiveFb={positiveFb}
+          />
         ) : (
-          <p>No feedback yet</p>
+          <Notification />
         )}
       </main>
     </>
